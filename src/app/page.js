@@ -9,7 +9,7 @@ import { RectAreaLightHelper } from 'three/examples/jsm/helpers/RectAreaLightHel
 
 function Robot({ targetPosition, onCollision }) {
   const robotRef = useRef();
-  const gltf = useGLTF('/robot.glb');
+  const gltf = useGLTF('/3d-website/robot.glb');
   const { actions, names } = useAnimations(gltf.animations, robotRef);
   const [currentTarget, setCurrentTarget] = useState(null);
   const [canMove, setCanMove] = useState(true);
@@ -600,7 +600,7 @@ export default function Home() {
       <Canvas
         camera={{ position: [20, 10, 0] }}
         style={{
-          backgroundImage: 'url("/img/galaxy.jpg")',
+          backgroundImage: 'url("/3d-website/img/galaxy.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -627,7 +627,7 @@ export default function Home() {
           /> */}
 
           <ModelLoader
-            gltf_url="/pc.glb"
+            gltf_url="/3d-website/pc.glb"
             scale={1}
             position={[0, 0, 0]}
             collisionSize={[4, 3, 4]}
@@ -636,7 +636,7 @@ export default function Home() {
           />
 
           <ModelLoader
-            gltf_url="/fish.glb"
+            gltf_url="/3d-website/fish.glb"
             scale={0.1}
             position={[0, 7, -2.5]}
             collisionSize={[0, 0, 0]}
@@ -655,7 +655,7 @@ export default function Home() {
             pushDirection={boxHits['box1']?.direction}
             velocity={boxHits['box1']?.velocity}
             key="box1"
-            texture_url="/img/laravel.png"
+            texture_url="/3d-website/img/laravel.png"
             onClick={(boxId, pos) => handleBoxClick('Proficient in PHP, Laravel and Yii2 framework with over 8 years of professional experience, specializing in building nationwide ERP systems and fintech solutions.', pos)}
           />
 
@@ -666,7 +666,7 @@ export default function Home() {
             pushDirection={boxHits['box2']?.direction}
             velocity={boxHits['box2']?.velocity}
             key="box2"
-            texture_url="/img/mysql.png"
+            texture_url="/3d-website/img/mysql.png"
             onClick={(boxId, pos) => handleBoxClick('Have experience working with big data, handling millions of records using SQL, and also skilled in NoSQL databases.', pos)}
           />
 
@@ -677,7 +677,7 @@ export default function Home() {
             pushDirection={boxHits['box3']?.direction}
             velocity={boxHits['box3']?.velocity}
             key="box3"
-            texture_url="/img/nginx.png"
+            texture_url="/3d-website/img/nginx.png"
             onClick={(boxId, pos) => handleBoxClick('Have hands-on experience deploying and managing servers on both on-premise systems and cloud services such as AWS and Digital Ocean.', pos)}
           />
 
@@ -688,7 +688,7 @@ export default function Home() {
             pushDirection={boxHits['box4']?.direction}
             velocity={boxHits['box4']?.velocity}
             key="box4"
-            texture_url="/img/react.png"
+            texture_url="/3d-website/img/react.png"
             onClick={(boxId, pos) => handleBoxClick('Have skilled in frontend development using Javascript and related frameworks, including React React Native and Next.js.', pos)}
           />
         </Physics>
